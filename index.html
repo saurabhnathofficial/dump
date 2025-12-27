@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container bg-light p-4">
+        <div class="row text-center border-bottom ">
+            <h2 class="h2">Saurabh Navigation</h2>
+        </div>
+        <div class="row border shadow rounded my-4 g-2 px-2">
+            <div class="col-lg-2 col-md-2 col-sm-10 mx-auto ">
+                <img class="img-fluid" src="./h1.png" alt="">
+            </div>
+            <div class="col-lg-4 col-md-10 col-sm-10 mx-auto d-flex flex-column justify-item-center align-item-center">
+                <h4>Technogaze Bhopal</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magni numquam inventore
+                    officiis hic dignissimos pariatur, et nam natus assumenda nihil ipsa.</p>
+            </div>
+        </div>
+        <div class="row border shadow rounded my-4 g-2 px-2">
+            <div class="col-lg-10 col-md-10 col-sm-10 mx-auto d-flex flex-column justify-center">
+                <h4>Technogaze Bhopal</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magni numquam inventore
+                    officiis hic dignissimos pariatur, et nam natus assumenda nihil ipsa.</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-10 mx-auto">
+                <img class="img-fluid" src="./h1.png" alt="">
+            </div>
+        </div>
+        <div class="row border shadow rounded my-4 g-2 px-2">
+            <div class="col-lg-2 col-md-2 col-sm-10 mx-auto d-flex flex-column justify-center">
+                <img class="img-fluid" src="./h1.png" alt="">
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 mx-auto">
+                <h4>Technogaze Bhopal</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magni numquam inventore
+                    officiis hic dignissimos pariatur, et nam natus assumenda nihil ipsa.</p>
+            </div>
+        </div>
+        <div class="row border shadow rounded my-4 g-2 px-2">
+            <div class="col-lg-10 col-md-10 col-sm-10 mx-auto d-flex flex-column justify-center">
+                <h4>Technogaze Bhopal</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magni numquam inventore
+                    officiis hic dignissimos pariatur, et nam natus assumenda nihil ipsa.</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-10 mx-auto">
+                <img class="img-fluid" src="./h1.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Thumbnail / Button -->
+    <img src="h1.png" class="img-fluid" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#photoModal">
+
+    <!-- Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center">
+                    <img src="h1.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function () {
+
+    // OPEN overlay
+    $('[unique-script-id="w-w-dm-id"] .btn-box').on('click', function () {
+        $(this).siblings('.overlay').fadeIn();
+    });
+
+    // CLOSE on Close button
+    $('[unique-script-id="w-w-dm-id"] .close').on('click', function (e) {
+        e.stopPropagation();
+        $(this).closest('.overlay').fadeOut();
+    });
+
+    // ✅ FIX: close when clicking outside image
+    $('[unique-script-id="w-w-dm-id"] .overlay').on('click', function () {
+        $(this).fadeOut();
+    });
+
+    // ❌ prevent close when clicking inside image container
+    $('[unique-script-id="w-w-dm-id"] .overlay-inner').on('click', function (e) {
+        e.stopPropagation();
+    });
+
+});
+</script>
